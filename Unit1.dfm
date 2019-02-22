@@ -2127,6 +2127,7 @@ object Form1: TForm1
     FFFFFFFFC0000003FFFFFFFFFFFFFFFFFFFFFFFFFC00003FFFFFFFFFFFFF}
   OldCreateOrder = False
   OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
@@ -2163,14 +2164,6 @@ object Form1: TForm1
     TabOrder = 3
     OnClick = Button2Click
   end
-  object ListBox1: TListBox
-    Left = 360
-    Top = 39
-    Width = 267
-    Height = 210
-    ItemHeight = 13
-    TabOrder = 4
-  end
   object RichEdit1: TRichEdit
     Left = 16
     Top = 39
@@ -2185,7 +2178,7 @@ object Form1: TForm1
       '')
     ParentFont = False
     ScrollBars = ssVertical
-    TabOrder = 5
+    TabOrder = 4
     Zoom = 100
   end
   object Button3: TButton
@@ -2194,7 +2187,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Send'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = Button3Click
   end
   object Edit3: TEdit
@@ -2202,6 +2195,6 @@ object Form1: TForm1
     Top = 270
     Width = 529
     Height = 21
-    TabOrder = 7
+    TabOrder = 6
   end
 end

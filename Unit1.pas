@@ -13,7 +13,6 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Button2: TButton;
-    ListBox1: TListBox;
     RichEdit1: TRichEdit;
     Button3: TButton;
     Edit3: TEdit;
@@ -21,6 +20,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormCreate(Sender: TObject);
   private
     my_client: TMy_Client;
     { Private declarations }
@@ -60,6 +60,13 @@ procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if my_client <> nil then
     my_client.Destroy;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  if my_client <> nil then
+    my_client.Destroy;
+  my_client := TMy_Client.Create(Edit1.Text, StrToInt(Edit2.Text));
 end;
 
 end.
